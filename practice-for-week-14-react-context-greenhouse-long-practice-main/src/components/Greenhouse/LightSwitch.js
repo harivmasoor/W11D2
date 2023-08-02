@@ -1,10 +1,14 @@
 import './LightSwitch.css';
 
-function LightSwitch() {
+function LightSwitch({themeName, setThemeName}) {
+
+
   return (
-    <div className="light-switch day">
-      <div className="on">DAY</div>
-      <div className="off">NIGHT</div>
+
+
+    <div className={`light-switch ${themeName}`}>
+      <div onClick={(e)=>setThemeName("day")} className="on">DAY</div>
+      <div onClick={(e)=> setThemeName("night")} className="off">NIGHT</div>
     </div>
   );
 }
